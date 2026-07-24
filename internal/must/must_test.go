@@ -189,7 +189,7 @@ func TestFirstLineBytesCRLF(t *testing.T) {
 	data := []byte("antani\r\nmascetti\r\nmelandri\r\n")
 	firstline := FirstLineBytes(data)
 	if string(firstline) != "antani" {
-		t.Fatalf("unexpected result: %q", firstline)
+		t.Fatalf("unexpected result: %+q", string(firstline))
 	}
 }
 
